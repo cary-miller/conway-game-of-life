@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!--Google API Includes other libs such as jquery.  -->
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+<script type="text/javascript">
+    google.load('jquery', '1')
+    google.load('jqueryui', '1')
+    google.load('visualization', '1', { 'packages':['corechart'] })
+    google.load('maps', '2')
+</script>
+
+<!-- Specialized extras -->
+
+<!-- d3js visualization -->
+<script src="http://d3js.org/d3.v2.js"></script>
+<script src="util.js"></script>
+<script src="conway.js"></script>
+
+
+<!-- jQuery UI multi-select -->
+<link type="text/css" rel="stylesheet"
+    href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/themes/ui-lightness/jquery-ui.css"
+        />
+
+<style type="text/css">
+body {
+    font-family: arial;
+    color: black;
+    background-color: white ;
+}
+rect {
+    stroke: white;
+    fill: steelblue;
+}
+rect.active {
+    stroke: white;
+    fill: wheat;
+}
+
+
+path {
+    stroke: steelblue;
+    stroke-width: 1;
+    fill: none;
+}
+circle {
+    stroke: steelblue;
+    stroke-width: 1;
+    fill: steelblue;
+    r=4;
+}
+
+
+
+</style>
+
+
+<title>Conway's Game of Life</title>
+</head>
+<body>
+
+<h4> Conway's Game of Life </h4>
+
+
+
+
+<div id='viz'> <svg class='chart'><text x=20 y=20></text></svg></div>
+<div id='buttons'>
+<button id='go_button'>Go</button> <br/>
+<button id='stop_button'>Stop</button> <br/>
+<button id='step_button'>Tick</button> <br/>
+<button id='reset_button'>Reset</button> <br/>
+</div>
+</body>
+<script type = 'text/javascript'>
+
+$(document).ready( function(){
+    console.log('yoohoo! conway!')
+    buttons()
+    $('#viz').css('float', 'left')
+//    $('#buttons').position({
+//        my: 'right top',
+//        at: 'right top',
+//        of: $('body'),
+//        collision: 'fit'
+//    })
+    $('#buttons').css({
+        position: 'absolute',
+        left: '320px',
+        top: '60px'
+    })
+    
+    
+    
+    })
+</script>
+
+
+</html>
