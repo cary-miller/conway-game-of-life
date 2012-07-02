@@ -1,4 +1,5 @@
 // Conway's Game of Life in javascript with graphics by d3js //
+//
 
 
 grid = {}

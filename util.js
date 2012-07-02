@@ -72,6 +72,21 @@ function range(a, b){
     return res
 }
 
+function range_____non_working(begin, end){
+    // This nifty version from
+// http://yesudeep.wordpress.com/2009/07/25/implementing-a-pythonic-range-function-in-javascript-2/
+// would be lovely if it worked but the `let` word causes trouble.
+    for (let i = begin; i < end; ++i){
+        yield i;
+    }
+// see
+// https://developer.mozilla.org/en/New_in_JavaScript_1.7
+// for a possible fix.
+}
+
+
+
+
 // 2 util
 function rep(thing, n){
     // Return a list of n reps of thing.
